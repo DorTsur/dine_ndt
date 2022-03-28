@@ -1,0 +1,63 @@
+{
+  "model_name": "dine_ndt",
+  "trainer_name": "dine_ndt",
+  "data_path": null,
+  "data_name": "gaussian",
+
+  "exp_name": "debug",
+  "run_name": "debug",
+  "tag_name": "debug_magn",
+
+  "config": "./configs/dine_ndt_mimo_awgn.json",
+
+  "x_dim": 4,
+  "y_dim": 4,
+
+  "eval_freq": 200,
+  "quiet": null,
+  "seed": null,
+
+  "bptt": 5,
+  "contrastive_duplicates": 5,
+  "batch_size" : 100,
+  "lr": 0.00015,
+  "num_epochs": 20000,
+  "channel_name": "awgn",
+  "feedback": 1,
+
+  "clip_grad_norm": 0.1,
+  "clip_grad_norm_enc": 0.2,
+  "dropout": 0,
+  "clip_likelihood_ratio": [-10.0, 10.0],
+  "weight_decay": 0.0,
+  "max_norm_y": 5,
+  "max_norm_xy": 5,
+
+  "batch_size_eval" : 5000,
+  "batches": 15,
+
+  "optimizer": "adam",
+
+  "DI_hidden": 100,
+  "DI_dropout": 0.0,
+  "DI_last_hidden": 100,
+
+  "NDT_hidden": 100,
+  "NDT_last_hidden": 100,
+  "NDT_dropout": 0.0,
+
+  "P": 1.0,
+  "channel_mat": "eye",
+  "constraint": "norm",
+  "v_std": 1.0,
+  "contrastive_type": "uniform",
+
+  "enc_hidden_lstm": 50,
+  "enc_hidden": [100,50],
+  "train_epoch_len": 50,
+  "eval_epoch_len": 500,
+  "visualize_epoch_len": 50,
+  "long_eval_epoch_len": 100,
+
+  "alpha": 0.5
+}

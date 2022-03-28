@@ -1,0 +1,65 @@
+{
+  "model_name": "mine_ndt",
+  "trainer_name": "mine_ndt",
+  "data_path": null,
+  "data_name": "uniform",
+
+  "exp_name": "mine",
+  "run_name": "ndt_struct_overnight",
+  "tag_name": "debug_awgn",
+
+  "config": "./configs/mine_ndt_awgn.json",
+
+  "x_dim": 1,
+  "y_dim": 1,
+
+  "eval_freq": 200,
+  "quiet": null,
+  "seed": null,
+
+  "bptt": 1,
+  "contrastive_duplicates": 1,
+  "batch_size" : 5000,
+  "lr": 0.0005,
+  "num_epochs": 20000,
+  "channel_name": "awgn",
+  "feedback": 1,
+
+  "clip_grad_norm": 0.1,
+  "clip_grad_norm_enc": 0.2,
+  "dropout": 0,
+  "clip_likelihood_ratio": [-10.0, 10.0],
+  "weight_decay": 0.0,
+  "max_norm_y": 5,
+  "max_norm_xy": 5,
+
+  "batch_size_eval" : 5000,
+  "batches": 15,
+
+  "optimizer": "adam",
+
+  "DV_hidden": 100,
+  "DV_dropout": 0.0,
+  "DV_last_hidden": 100,
+
+  "NDT_hidden": 100,
+  "NDT_last_hidden": 100,
+  "NDT_dropout": 0.0,
+
+  "P": 1.0,
+  "channel_mat": "eye",
+  "constraint": "norm",
+  "v_std": 1.0,
+  "contrastive_type": "uniform",
+
+  "enc_hidden_lstm": 50,
+  "enc_hidden": [100,50],
+  "train_epoch_len": 50,
+  "eval_epoch_len": 500,
+  "visualize_epoch_len": 50,
+  "long_eval_epoch_len": 100,
+
+  "ndt_eval_freq": 1000,
+  "repeat_uniform": 10,
+  "deep_ndt": 0
+}
